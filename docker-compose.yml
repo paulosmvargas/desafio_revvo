@@ -1,0 +1,21 @@
+doversion: '3.8'
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - "81:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: desafio_revvo
+      MYSQL_DATABASE: desafio_revvo
+      MYSQL_USER: desafio
+      MYSQL_PASSWORD: desafio_revvo
+    ports:
+      - "6033:3306"
