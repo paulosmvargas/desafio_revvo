@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev
     && docker-php-ext-install gd pdo pdo_mysql mysqli
 
 # Copiar os arquivos do projeto para o container
-COPY . /var/www/html
+COPY ./app /var/www/html
 
 # Expor a porta 80
 EXPOSE 80
