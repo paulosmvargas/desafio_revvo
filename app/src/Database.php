@@ -5,14 +5,13 @@ class Database {
     public static function getConnection() {
         if (!isset(self::$pdo)) {
             try {
-                $host = "0.0.0.0";
+                $host = "172.10.0.3";
                 $dbname = "desafio_revvo";
                 $user = "root";
                 $pass = "desafio_revvo";
-                $port = 6033;
 
-                $dsn = "mysql:host=$host;dbname=$dbname;port=$port;charset=utf8mb4";
-                self::$pdo = new PDO($dsn, $user, $pass, $port, [
+                $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
+                self::$pdo = new PDO($dsn, $user, $pass, [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                 ]);
