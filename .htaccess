@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Remove "index.php" da URL (caso ainda não tenha feito)
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^index\.php/(.*)$ /$1 [R=301,L]
+
+# Permite acesso direto a arquivos e diretórios
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Remove ".php" das URLs
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
