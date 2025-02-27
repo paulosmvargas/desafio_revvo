@@ -10,11 +10,11 @@ $input = json_decode(file_get_contents("php://input"), true);
 
 if ($method == "GET") {
     if ($id) {
-        $stmt = $pdo->prepare("SELECT * FROM cursos WHERE id = ?");
+        $stmt = $pdo->prepare("SELECT * FROM cursos ORDER BY titulo ASC WHERE id = ?");
         $stmt->execute([$id]);
         echo json_encode($stmt->fetch());
     } else {
-        $stmt = $pdo->query("SELECT * FROM cursos");
+        $stmt = $pdo->query("SELECT * FROM cursos ORDER BY titulo ASC");
         echo json_encode($stmt->fetchAll());
     }
 }
