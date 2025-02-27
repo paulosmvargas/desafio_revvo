@@ -27,7 +27,7 @@ services:
     ports:
       - "6033:3306"
     volumes:
-      - ./database/starter.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./app/db/starter.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       desafio_net:
         ipv4_address: 172.10.0.3
