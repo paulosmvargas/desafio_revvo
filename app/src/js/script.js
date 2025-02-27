@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Script carregado!");
 
-  // ========== MODAL INICIAL ==========
   let modal = document.getElementById("modal");
   if (!modal) {
     console.error("Modal inicial não encontrado!");
@@ -78,15 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function adicionarEventosCursos() {
-    console.log("Adicionando eventos aos cursos...");
     document.querySelectorAll(".curso").forEach((cursoCard) => {
       cursoCard.addEventListener("click", function (event) {
         if (cursoCard.classList.contains("add-curso")) {
-          console.log("Abrindo modal para adicionar curso...");
           abrirModalCurso();
         } else if (!event.target.classList.contains("btn-curso")) {
           let cursoId = cursoCard.dataset.id;
-          console.log("Abrindo modal para editar curso ID:", cursoId);
           abrirModalCurso(cursoId);
         }
       });
@@ -122,14 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (closeCursoBtn) {
     closeCursoBtn.addEventListener("click", function () {
-      console.log("Fechando modal de curso...");
       cursoModal.style.display = "none";
     });
   }
 
   window.addEventListener("click", function (event) {
     if (event.target === cursoModal) {
-      console.log("Fechando modal de curso ao clicar fora...");
       cursoModal.style.display = "none";
     }
   });
@@ -151,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json())
       .then(() => {
-        console.log("Curso salvo com sucesso!");
         cursoModal.style.display = "none";
         carregarCursos();
       })
@@ -166,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(`src/api.php?id=${cursoId}`, { method: "DELETE" })
       .then((response) => response.json())
       .then(() => {
-        console.log("Curso deletado com sucesso!");
         cursoModal.style.display = "none";
         carregarCursos();
       })
