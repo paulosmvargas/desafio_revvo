@@ -12,9 +12,9 @@
         <div class="footer__social">
             <h3>// REDES SOCIAIS</h3>
             <div class="social-icons">
-                <a href="#"><img src="public/images/twitter-x-32.png" alt="X"></a>
-                <a href="#"><img src="public/images/youtube-32.png" alt="YouTube"></a>
-                <a href="#"><img src="public/images/pinterest-32.png" alt="Pinterest"></a>
+                <a href="https://x.com"><img src="public/images/twitter-x-32.png" alt="X"></a>
+                <a href="https://www.youtube.com"><img src="public/images/youtube-32.png" alt="YouTube"></a>
+                <a href="https://www.pinterest.com"><img src="public/images/pinterest-32.png" alt="Pinterest"></a>
             </div>
         </div>
     </div>

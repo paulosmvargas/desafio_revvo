@@ -9,7 +9,7 @@
     </div>
 
     <div class="mySlides fade">
-        <img src="https://picsum.photos/1920/500?random=13" class="slide-img">
+        <img src="https://picsum.photos/1920/500?random=16" class="slide-img">
         <div class="text-box">
             <h2>Curso Bacana</h2>
             <p>Desenvolva suas habilidades com um aprendizado dinâmico.</p>
