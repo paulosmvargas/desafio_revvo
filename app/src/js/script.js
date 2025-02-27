@@ -17,4 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Erro ao carregar cursos:", error));
+    
+    let modal = document.getElementById("modal");
+    let closeBtn = document.querySelector(".close");
+    
+    if (!localStorage.getItem("modalShown")) {
+        modal.style.display = "block";
+        localStorage.setItem("modalShown", "true");
+    }
+    
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
 });

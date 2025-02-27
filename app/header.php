@@ -7,7 +7,8 @@
         <button type="submit">🔍</button>
     </div>
     <div class="user-info">
-        <span>Jhon Doe</span>
+        <p>Bem vindo, </p>
+        <span>John Doe</span>
         <img src="public/images/user.png" alt="Usuário">
     </div>
 </header>

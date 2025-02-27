@@ -16,7 +16,7 @@ class Database {
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                 ]);
             } catch (PDOException $e) {
-                die("Erro na conexão: " . $e->getMessage());
+                die("Erro: " . $e->getMessage());
             }
         }
         return self::$pdo;
