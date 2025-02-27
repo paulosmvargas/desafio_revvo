@@ -1,12 +1,20 @@
 FROM php:8.2-apache
 
-# Instalar extensões necessárias
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql mysqli
+ENV TZ=America/Sao_Paulo
+RUN echo "date.timezone=${TZ}" > /usr/local/etc/php/conf.d/timezone.ini
 
-# Copiar os arquivos do projeto para o container
+RUN apt-get update && apt-get install -y \
+    libpng-dev libjpeg-dev libfreetype6-dev libzip-dev unzip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd pdo pdo_mysql mysqli zip
+
 COPY ./app /var/www/html
 
-# Expor a porta 80
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get install -y nodejs
+
+RUN npm install --global gulp-cli && npm install
+
 EXPOSE 80
+
+CMD ["apache2-foreground"]
