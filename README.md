@@ -16,8 +16,9 @@ Desafio usando PHP 8.2 + MySQL 8 rodando em ambiente Docker, Gulp + SASS incluso
    ```sh
    docker-compose up -d --build
    ```
-
-3. **Acesse a aplicação**
+*Pode ser que demore alguns segundos até o banco ser populado pelo container*
+   
+4. **Acesse a aplicação**
    
    ```
    http://localhost:81
