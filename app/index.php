@@ -23,8 +23,8 @@ require_once "config.php";
         </main>
 
         <?php include 'modal.php'; ?>
+        <?php include 'footer.php'; ?>
     </div>
-    <?php include 'footer.php'; ?>
 
     <script src="src/js/script.js"></script>
     <script src="src/js/slideshow.js"></script>

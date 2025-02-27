@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    // URL da API corrigida
     fetch("src/api.php")
       .then((response) => response.json())
       .then((data) => {
@@ -47,10 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
           container.innerHTML += cursoHTML;
         });
   
-        // Adiciona o card "Adicionar Curso" ao final
         let addCursoHTML = `
           <div class="curso add-curso">
-            <img src="src/images/add-icon.png" alt="Adicionar Curso">
+            <img src="public/images/plus.png" alt="Adicionar Curso">
             <h2>Adicionar Curso</h2>
           </div>
         `;

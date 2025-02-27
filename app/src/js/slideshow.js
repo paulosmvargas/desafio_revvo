@@ -22,13 +22,11 @@ function showSlides() {
 
 }
 
-// Navegação manual
 function plusSlides(n) {
     slideIndex += n - 1;
     showSlides();
 }
 
-// Mudar para slide específico
 function currentSlide(n) {
     slideIndex = n - 1;
     showSlides();
