@@ -131,7 +131,7 @@ body {
   }
 }
 
-/* Modal Padrão */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -185,23 +185,24 @@ body {
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 14px;
       color: #333;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 10px;
       color: #666;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 10px 14px;
       background: #0095f6;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      font-size: 14px;
       margin-top: 10px;
       transition: background 0.3s ease;
     }
@@ -212,7 +213,7 @@ body {
   }
 }
 
-/* Modal de Cursos */
+/* Cursos Modal */
 #curso-modal {
   display: none;
   position: fixed;
@@ -401,10 +402,22 @@ body {
   h2 {
     font-size: 14px;
     color: #9e9e9e;
+    text-align: center;
   }
 
   &:hover {
     background: #f9f9f9;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-curso {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  .add-curso img {
+    padding-top: 20px;
   }
 }
 
