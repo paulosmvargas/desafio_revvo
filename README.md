@@ -7,8 +7,8 @@ Desafio usando PHP 8.2 + MySQL 8 rodando em ambiente Docker, Gulp + SASS incluso
 1. **Clonar o repositório**
 
    ```sh
-   git clone https://github.com/seu-usuario/desafio_php.git
-   cd desafio_php
+   git clone https://github.com/paulosmvargas/desafio_revvo.git
+   cd desafio_revvo
    ```
 
 2. **Buildar e iniciar**
