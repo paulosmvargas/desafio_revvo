@@ -14,11 +14,13 @@
 .mySlides {
   display: none;
   position: relative;
+  max-height: 400px;
+  height: 400px;
 }
 
 .slide-img {
   width: 100%;
-  height: auto;
+  height: 400px;
   display: block;
 }
 

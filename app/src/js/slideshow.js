@@ -1,33 +1,24 @@
-let slideIndex = 0;
-showSlides();
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
+function showSlides(n) {
     let slides = document.querySelectorAll(".mySlides");
     let dots = document.querySelectorAll(".dot");
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
 
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides.forEach(slide => slide.style.display = "none");
+    dots.forEach(dot => dot.classList.remove("active"));
 
     slides[slideIndex - 1].style.display = "block";
-
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-    }
-
     dots[slideIndex - 1].classList.add("active");
-
 }
 
 function plusSlides(n) {
-    slideIndex += n - 1;
-    showSlides();
+    showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-    slideIndex = n - 1;
-    showSlides();
+    showSlides(slideIndex = n);
 }
