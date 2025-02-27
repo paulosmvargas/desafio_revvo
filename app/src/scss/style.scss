@@ -131,8 +131,7 @@ body {
   }
 }
 
-/* Modal */
-
+/* Modal Padrão */
 .modal {
   display: none;
   position: fixed;
@@ -145,57 +144,178 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    .close {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .close:hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .modal-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #0095f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #007acc;
+    }
+  }
 }
 
-.modal-content {
-  position: relative;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: auto;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 9px;
-}
-
-.close {
-  position: absolute;
-  top: -14px;
-  right: -14px;
-  width: 30px;
-  height: 30px;
+/* Modal de Cursos */
+#curso-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.close:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
+  .modal-curso-content {
+    position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
-.modal-image {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
+    h2 {
+      font-size: 14px;
+      color: #333;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #0095f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 10px 0 5px;
+      font-size: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .btn-curso {
+      background: #0095f6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-curso:hover {
+      background: #007acc;
+    }
+
+    .btn-danger {
+      background: red;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-danger:hover {
+      background: darkred;
+    }
+  }
+
+  .close-curso {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .close-curso:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
 }
 
 /* Main */
@@ -216,6 +336,7 @@ body {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
 
   img {
